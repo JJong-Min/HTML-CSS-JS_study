@@ -1,0 +1,47 @@
+.div-1 {
+    background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    width:100%;
+    height:89%;
+    position: relative;
+    
+
+}
+
+.div-text {
+    color: white;
+    text-align:center;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#p-1 {
+    font-weight: 900;
+    font-size: 3.8em;
+}
+
+#p-2 {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.div-2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#btn {
+    background-color: white;
+    border-radius: 7px 7px;
+    border-color: lightgray;
+    border-style:solid;
+
+}
+/*요소 가운데 위치하기*/
+#top-div {
+    width: 50%;
+    margin: 10px auto;
+}
