@@ -1,0 +1,76 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div-1 {
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+            width:100%;
+            height:89%;
+            position: relative;
+            
+
+        }
+
+        .div-text {
+            color: white;
+            text-align:center;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+        }
+
+        #p-1 {
+            font-weight: 900;
+            font-size: 3.8em;
+        }
+
+        #p-2 {
+            font-weight: 900;
+            font-size: 1.5em;
+        }
+
+        .div-2 {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #btn {
+            background-color: white;
+            border-radius: 7px 7px;
+            border-color: lightgray;
+            border-style:solid;
+
+        }
+        /*요소 가운데 위치하기*/
+        #top-div {
+            width: 50%;
+            margin: 10px auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id = "top-div">
+        <div class="div-1">
+            <div class="div-text">
+                <p id = "p-1">로그인 페이지</p>
+                <p id = "p-2">아이디, 비밀번호를 입력해주세요</p>
+            </div>
+        </div>
+
+        <div class="div-2">
+            <p>ID: <input type="text" /></p>
+            <p>PW: <input type="text" /></p> 
+            <button id = "btn">로그인하기</button>
+        </div>
+    </div>
+</body>
+</html>
