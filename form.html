@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li {
+            list-style-type : none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form></form>
+        <!--label 지정법 1-->
+        <label>id<input type="text"></label>
+        <!--label 지정법 2-->
+        <label for="user-pwd">password</label>
+        <input type="password" id="user-pwd">
+
+        <!--label사용안한 checkbox(텍스트 클릭시 선택 안됨)-->
+        <ul>
+            <li><input type="checkbox">문법</li>
+            <li><input type="checkbox">작문</li>
+            <li><input type="checkbox">독해</li>
+        </ul>
+
+        <!--label사용한 radiobox(텍스트 클릭시 선택 가능)-->
+        <ul>
+            <li>
+                <label><input type="radio">영어</label>
+            </li>
+            <li>
+                <label><input type="radio">중국어</label>
+            </li>
+            <li>
+                <label><input type="radio">한국어</label>
+            </li>
+        </ul>
+
+        <!--fieldset 이용하에 form내 구역나누기-->
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label>이름<input type="text"></label>
+                </li>
+                <li>
+                    <label>이메일<input type="text"></label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label>아이디<input type="text"></label>
+                </li>
+                <li>
+                    <label>비밀번호<input type="password"></label>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+</body>
+</html>
