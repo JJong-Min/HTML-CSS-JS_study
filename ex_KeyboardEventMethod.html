@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    
+    <script>
+        var i= 0;
+        $(document).ready(function(){
+            /*key를 누르면 이벤트 발생*/
+            $("input").keydown(function(){
+                $(this).css("background-color", "yellow");
+            })
+            /*누르고 있던 key를 때면 이벤트 발생*/
+            $("input").keyup(function(){
+                $(this).css("background-color", "pink")
+            })
+
+            /*keydown과 유사하나 일부 키에 대해 실행되지 않음*/
+            $("input").keypress(function(){
+                $("span").text(i+=1);
+            })
+
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter your name: <input type="text"></label>
+    <p>KeyPresses: <span>0</span></p>
+</body>
+</html>
