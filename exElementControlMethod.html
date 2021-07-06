@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        div {
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $('.p-1').append(" <b>Append text</b>.");
+            });
+
+            $("#btn2").click(function(){
+                $('ol').append("<li>Append item</li>");
+            });
+
+            $("#btn3").click(function(){
+                $('.p-1').prepend("<b>Prepend Text</b>.");
+            });
+
+            $("#btn4").click(function(){
+                $('ol').prepend("<li>Prepend item</li>")
+            })
+            
+            $("#btn5").click(function(){
+                $('h1').appendTo(".p-2");
+            })
+            
+            $("#btn6").click(function(){
+                $('h1').prependTo(".p-2")
+            })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 2px solid black;">
+        <p class='p-1'>This is a paragraph.</p>
+        <p class='p-1'>This is another paragraph.</p>
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>LIst item 3</li>
+        </ol>
+
+        <button id="btn1">Append text</button>
+        <button id="btn2">Append list items</button>
+        <button id="btn3">Prepend text</button>
+        <button id="btn4">Prepend list item</button>
+    </div>
+
+    <div>
+        <button id="btn5">Insert after element</button>
+        <button id="btn6">Insert before element</button>
+        <h1>This is a heading</h1>
+        <p class='p-2'>This is a paragraph.</p>
+        <p class='p-2'>This is another paragraph.</p>
+
+    </div>
+</body>
+</html>
