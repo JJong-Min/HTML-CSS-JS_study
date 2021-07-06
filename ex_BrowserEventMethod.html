@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var x= 0;
+        $(document).ready(function(){
+            /*브라우저 창의 크기가 변결될 때 이벤트 발생*/
+            $(window).resize(function(){
+                $("span").text(window.innerWidth);
+            })
+
+            /*사용자가 지정된 요소에서 스크롤 할 때 이벤트 발생*/
+            $("div").scroll(function(){
+                $("#span-1").text(x+=1);
+            })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter your name: <input type="text"></label>
+    <p>Keypresses: <span>0</span></p>
+    <br>
+    <div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+        <p>
+            Cette année, la journée RamDAM aura lieu le 26 mai avec pour sujet les Oscillateurs harmoniques,
+            l'entrepreneuriat acoustique, l'Histoire de la recherche en acoustique,
+            les Méthodes numériques et une conférence avec La Sciences S'honore.
+            <br><br>
+            Venez découvrir les formations en acoustique de l'Institut d'Acoustique - Graduate School lors de la Journée Portes Ouvertes 2021 en ligne !!
+        </p>
+    </div>
+    <p>Scrolled <span id="span-1">0</span> times.</p>
+</body>
+</html>
