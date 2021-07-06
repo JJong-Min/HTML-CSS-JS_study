@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            /*p태그 클릭시 해당 요소 숨기기*/
+            $("p").click(function(){
+                $(this).hide();
+            })
+
+            /*p태그에 마우스 포인터가 올라갈시 배경색 변경*/
+            $("#p-1").mouseenter(function(){
+                $("#p-1").css("background-color", "yellow")
+            })
+
+            /*p태그에 마우스 포인터가 벗어날시 배경색 변경*/
+            $("#p-1").mouseleave(function(){
+                $("#p-1").css("background-color", "white")
+            })
+
+            /*p태그를 마우스 버튼을 누른 상태일 때 실행*/
+            $("#p-2").mousedown(function(){
+                alert("Mouse down over p2!");
+            })
+
+            /*p태그를 마우스 버튼을 놓은 상태일 때 실행*/
+            $("#p-3").mouseup(function(){
+                alert("Mouse up over p2!");
+            })
+
+            /*마우스 포인터가 선택된 요소 내에서 움직일 때 이벤트 발생*/
+            $(document).mousemove(function(event){
+                $("span").text(event.pageX + "," + event.pageY);
+            })
+
+            /*마우스 포인터가 선택된 요소 위에 있을 때 실행되는 2가지 함수를 지정*/
+            $("#p-4").hover(function(){
+                alert("mouse down over p4!");
+            },
+            function(){
+                alert("Bye! You now leave p4!");
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <p id="p-1">If you click on me, I will disappear.</p>
+    <p id="p-2">Click me away!</p>
+    <p id="p-3">Click me too!</p>
+    <p id="p-4">Mouse is at coordinates: <span></span>.</p>
+
+    
+</body>
+</html>
